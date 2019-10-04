@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
     <title>Take a Survey</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    
   </head>
   <body>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
@@ -25,12 +28,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
     <!-- Material -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 
@@ -42,16 +45,6 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
     <form>
-            <!-- <div class="form-group">
-              <label for="name">Name</label>
-              <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="name" placeholder="Enter name">
-              <small id="name" class="form-text text-muted">This is required</small>
-              <br>
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="email" class="form-text text-muted">This is required</small>
-            </div> -->
-
             <div class="form-group">
                     <label for="name"><h4>Name</h4></label>
                     <br>
@@ -73,31 +66,31 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios4" value="3">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios5" value="3">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
@@ -110,31 +103,31 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios6" value="1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios7" value="2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios8" value="3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios9" value="4">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios10" value="5">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
@@ -147,31 +140,31 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios11" value="1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios12" value="2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios13" value="3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios14" value="4">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios15" value="5">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
@@ -184,31 +177,31 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios16" value="1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios17" value="2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios18" value="3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios19" value="4">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios20" value="5">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
@@ -221,31 +214,31 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios21" value="1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios22" value="2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios23" value="3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios24" value="4">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios25" value="5">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
@@ -258,31 +251,31 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios26" value="1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios27" value="2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios28" value="3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios29" value="4">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios30" value="5">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
@@ -295,31 +288,31 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios31" value="1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios32" value="2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios33" value="3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios34" value="4">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios35" value="5">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
@@ -332,31 +325,31 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios36" value="1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios37" value="2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios38" value="3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios39" value="4">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios40" value="5">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
@@ -369,31 +362,31 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios41" value="1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios42" value="2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios43" value="3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios44" value="4">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios45" value="5">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
@@ -406,45 +399,78 @@
         <br>
         <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  <input type="radio" name="optionsRadios" id="optionsRadios46" value="1" data-value-1 = "1">
                   1 <small>Strongly Disagree</small>
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input type="radio" name="optionsRadios" id="optionsRadios47" value="2" data-value-2 = "2">
                   2
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                  <input type="radio" name="optionsRadios" id="optionsRadios48" value="3"data-value-3 = "3">
                   3
                 </label>
               </div>
               <div class="radio">
                     <label>
-                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <input type="radio" name="optionsRadios" id="optionsRadios49" value="4"data-value-4 = "4">
                       4
                     </label>
                   </div>
                   <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                          <input type="radio" name="optionsRadios" id="optionsRadios50" value="5"data-value-5 = "5">
                           5 <small>Strongly Agree</small>
                         </label>
                       </div>
                             <hr>
                         </form>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+            
+        </form>
+        <button type="submit" class="btn btn-primary"id="submit-btn">Submit</button>
         </div>
         <div class="col-md-2"></div>
         </div>
     </div>
 
-   
+   <!-- <script src="/../routing/htmlRoutes.js"></script>  -->
+   <script type="text/javascript">
+   // On click of submit button
+$("#submit-btn").on("click", function(event){
+    // To prevent page from loading
+    event.preventDefault();
+
+    var name = $("#enterName").val().trim();
+    var email = $("#enterEmail").val().trim();
+    var answerArr = [];
+
+    for(var i=1; i<=50; i++){
+    if($("input[id=optionsRadios"+i+"]:checked").val()){
+        answerArr.push($("input[id=optionsRadios"+i+"]:checked").val());
+    }
+    
+}
+var newFriend = {
+        name: name,
+        email: email,
+        score: answerArr
+      };
+
+      $.post("/api/friends", newFriend)
+        .then(function(data) {
+          console.log(data);
+          alert("Finding your match..");
+        });
+
+    
+
+})
+   </script>
 
 </body>
 
