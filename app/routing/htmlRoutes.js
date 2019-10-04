@@ -17,7 +17,7 @@ var newFriend = {
         name: name,
         email: email,
         score: answerArr
-      }
+      };
 
       $.post("/api/friends", newFriend)
         .then(function(data) {

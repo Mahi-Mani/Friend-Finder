@@ -62,3 +62,5 @@ app.post("/api/friends", function(req, res) {
 app.listen(PORT, function(){
     console.log("App listening to PORT " + PORT);
 })
+
+module.export = friends;

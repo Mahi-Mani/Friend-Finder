@@ -436,10 +436,80 @@
         </div>
         <div class="col-md-2"></div>
         </div>
+
+        <!-- Modals -->
+        <!-- <div class="modal" tabindex="-1" role="dialog"id="modal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+
+  <!-- Modal Structure -->
+  <div id="modal" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+
+
     </div>
 
    <!-- <script src="/../routing/htmlRoutes.js"></script>  -->
    <script type="text/javascript">
+  //  var friends = require("./server.js");
+  var friends = [
+    {
+        name: "Joey",
+        photo: "",
+        scores: [5, 1, 4, 1, 1, 1, 4, 1, 5, 1]
+    },
+    {
+        name: "Phoebe",
+        photo: "",
+        scores: [5, 3, 4, 1, 1, 4, 5, 2, 1, 4]
+    },
+    {
+        name: "Monica",
+        photo: "",
+        scores: [3, 4, 1, 5, 5, 5, 1, 3, 1, 3]
+    },
+    {
+        name: "Rachel",
+        photo: "",
+        scores: [3, 5, 5, 3, 3, 1, 2, 1, 1, 2]
+    },
+    {
+        name: "Ross",
+        photo: "",
+        scores: [1, 2, 2, 3, 1, 1, 3, 3, 1, 5]
+    }
+]
+   var answerArr = [];
+   var difference1 = 0;
+   var difference2 = 0;
+   var difference3 = 0;
+   var difference4 = 0;
+   var difference5 = 0;
+
    // On click of submit button
 $("#submit-btn").on("click", function(event){
     // To prevent page from loading
@@ -447,11 +517,13 @@ $("#submit-btn").on("click", function(event){
 
     var name = $("#enterName").val().trim();
     var email = $("#enterEmail").val().trim();
-    var answerArr = [];
+    // var answerArr = [];
 
     for(var i=1; i<=50; i++){
     if($("input[id=optionsRadios"+i+"]:checked").val()){
-        answerArr.push($("input[id=optionsRadios"+i+"]:checked").val());
+      var number = ($("input[id=optionsRadios"+i+"]:checked").val());
+      console.log(number);
+        answerArr.push(parseInt(number));
     }
     
 }
@@ -461,15 +533,95 @@ var newFriend = {
         score: answerArr
       };
 
-      $.post("/api/friends", newFriend)
-        .then(function(data) {
-          console.log(data);
-          alert("Finding your match..");
-        });
-
+      // $.post("/api/friends", newFriend)
+      //   .then(function(data) {
+      //     console.log(data);
+      //     // alert("Finding your match..");
+      //   });
+        calculateResult();
     
 
 })
+
+// Calculate difference between user scores and available scores
+function calculateResult(){
+  console.log(answerArr);
+  console.log(friends[0].scores[0]);
+  for(var i=0; i<answerArr.length; i++){
+    if(answerArr[i] > friends[0].scores[i])
+    {
+    difference1 = difference1 + (answerArr[i] - friends[0].scores[i]);
+    }
+    else
+    difference1 = difference1 + (friends[0].scores[i] - answerArr[i]);
+  }
+  console.log(difference1);
+
+  for(var i=0; i<answerArr.length; i++){
+    if(answerArr[i] > friends[1].scores[i])
+    {
+    difference2 = difference2 + (answerArr[i] - friends[1].scores[i]);
+    }
+    else
+    difference2 = difference2 + (friends[1].scores[i] - answerArr[i]);
+  }
+  console.log(difference2);
+
+  for(var i=0; i<answerArr.length; i++){
+    if(answerArr[i] > friends[2].scores[i])
+    {
+    difference3 = difference3 + (answerArr[i] - friends[2].scores[i]);
+    }
+    else
+    difference3 = difference3 + (friends[2].scores[i] - answerArr[i]);
+  }
+  console.log(difference3);
+
+  
+  for(var i=0; i<answerArr.length; i++){
+    if(answerArr[i] > friends[3].scores[i])
+    {
+    difference4 = difference4 + (answerArr[i] - friends[3].scores[i]);
+    }
+    else
+    difference4 = difference4 + (friends[3].scores[i] - answerArr[i]);
+  }
+  console.log(difference4);
+
+  for(var i=0; i<answerArr.length; i++){
+    if(answerArr[i] > friends[4].scores[i])
+    {
+    difference5 = difference5 + (answerArr[i] - friends[4].scores[i]);
+    }
+    else
+    difference5 = difference5 + (friends[4].scores[i] - answerArr[i]);
+  }
+  console.log(difference5);
+
+  if(difference1 <= difference2 && difference1 <= difference3 && difference1 <= difference4 && difference1 <= difference5 ){
+    console.log(difference1 + "is the smallest");
+  }
+  else if(difference2 <= difference1 && difference2 <= difference3 && difference2 <= difference4 && difference2 <= difference5){
+    console.log(difference2 + " is the smallest");
+  }
+  else if(difference3 <= difference1 && difference3 <= difference2 && difference3 <= difference4 && difference3 <= difference5){
+    console.log(difference3 + " is the smallest");
+  }
+  
+  else if(difference4 <= difference1 && difference4 <= difference2 && difference4 <= difference3 && difference4 <= difference5){
+    console.log(difference4 + " is the smallest");
+  }
+  else{
+    console.log(difference5 + " is the smallest");
+  }
+  projectResult();
+}
+
+// Function that projects results of similarity
+function projectResult(){
+  
+    $("#modal").modal("toggle");
+}
    </script>
 
 </body>
