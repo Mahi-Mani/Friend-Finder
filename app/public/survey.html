@@ -487,7 +487,7 @@
                     </div>
                     <div class="modal-footer">
                       <!-- <button type="button" class="btn btn-primary"href="/">Home</button> -->
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal"id="modalClose">Close</button>
                     </div>
                   </div>
                 </div>
@@ -549,6 +549,7 @@ var newFriend = {
           }
           else if((newFriend.score.length < 10)){
             alert("Please check radio buttons to view result");
+            answerArr = [];
           }
 
           else{
@@ -665,7 +666,24 @@ function projectResult(difference, flag){
     $("#modal").modal("toggle");
     $(".modal-body").append("<h4>" + "Ahh! Here you Go! Your Twin is " + friends[flag].name + " <i class='fas fa-theater-masks'></i>"+ "</h4>");
   });
+
 }
+
+$("#modalClose").on("click", function(){
+  
+  $("#enterName").val("");
+  $("#enterEmail").val("");
+  $("input:radio").attr("checked", false);
+//   for(var i=1; i<=50; i++){
+//       var number = ($("input[id=optionsRadios"+i+"]:checked").val(""));
+//       number = false;
+    
+    
+// }
+
+
+})
+
    </script>
 
 </body>
