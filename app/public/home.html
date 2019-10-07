@@ -8,10 +8,35 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <title>Friend Finder</title>
+    <style>
+        #bg{
+    height: 250px;
+    box-shadow: 10px 10px 5px grey;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .jumbotron {
+background-image: url(https://wallup.net/wp-content/uploads/2016/07/19/21775-Friends_TV_series-Chandler_Bing-Ross_Geller-Monica_Geller-Rachel_Green-Phoebe_Buffay-Joey_Tribbiani-748x561.jpg);
+background-size: cover;
+height: 100%;}
+
+    </style>
   </head>
+  <!-- <body background="https://timelinecovers.pro/facebook-cover/download/friends-tv-show-facebook-cover.jpg"> -->
   <body>
 
     <!-- Optional JavaScript -->
@@ -19,19 +44,38 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+      <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     
+  
+    
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-info p-3 mb-2 bg-info text-white shadow-lg p-3 mb-5 rounded">
+        <span class="navbar-brand mb-0 h1 center">FRIENDS' TWIN FINDER</span>
+        <div id="bg" class="py-5 text-center" style="background-image: url(https://timelinecovers.pro/facebook-cover/download/friends-tv-show-facebook-cover.jpg); border: 1px solid black;"></div>
+      </nav> -->
+
+      <div id="bg" class="py-3 text-center" style="background-image: url(https://vignette.wikia.nocookie.net/friends/images/b/ba/Friends_TV_series.jpeg/revision/latest?cb=20180430013933); border: 1px solid black;"> 
+    
+        <br>
+        </div>
+
+      <br><br><br>
+
     <!-- Jumbotron -->
     <!-- row -->
     <div class="row">
         <div class="col-md-2"></div>
         <div class = "col-md-8">
     <div class="jumbotron text-center">
-            <h1 class="display-4">Friend Finder</h1>
-            <p class="lead">Give us your details and walk away with a friend</p>
-            <hr class="my-4">
-            <p>Take a few minutes to complete the survey</p>
+            <h1 class="display-4 text-white"><strong><i class="fas fa-laugh-wink"></i>&nbsp FRIENDS' TWIN FINDER</strong></h1>
+            <br><br><br><br><br><br>
+            <p class="lead text-white"><strong><i class="fas fa-fingerprint"></i>&nbsp Find your Friends' Twinner!</strong></p>
+            <p class="text-white"><strong>Take a few minutes to complete the survey</strong></p>
             <p class="lead">
-              <a class="btn btn-primary btn-lg" href= "/survey"role="button"id="survey-btn">Go to Survey</a>
+              <a class="btn btn-warning btn-lg text-white" href= "/survey"role="button"id="survey-btn"><h2><strong><i class="fas fa-poll-h"style="text-shadow: 2px 2px 5px #000;"></i>&nbsp Go to Survey</strong></h2></a>
             </p>
           </div>
         </div>
@@ -44,7 +88,7 @@
             <p>
             <a href = "/api/friends">API Friends List</a>
             |
-            <a href = "#">GitHub Repo</a>
+            <a href = "https://github.com/Mahi-Mani">GitHub Repo</a>
         </p>
         </div>
         <div class= "col-md-2"></div>

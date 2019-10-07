@@ -11,9 +11,37 @@
     <!-- Material Design for Bootstrap CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
     <title>Take a Survey</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        #profile{
+    float: center;
+    display: block;
+    width: 450px;
+    height: 450px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 5px grey;
+  } 
+  body{
+    background-image: url("https://cdn.pizap.com/pizapfiles/images/photo_backgrounds_textures_app04.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+    }
+    hr{
+      border: 1px solid #00ffff;
+    }
+    </style>
     
   </head>
   <body>
@@ -24,7 +52,7 @@
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-  </body>
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -44,54 +72,57 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-    <form>
-            <div class="form-group">
-                    <label for="name"><h4>Name</h4></label>
+    <form name="myForm">
+            <div class="form-group needs-validation">
+                    <label for="name"class="text-primary"><h4>Name</h4></label>
                     <br>
-                    <input type="name" class="form-control" id="enterName" aria-describedby="emailHelp" placeholder="Enter name">
-                    <small id="name" class="form-text text-muted">This is required</small>
+                    <input type="name" class="form-control text-primary is-valid" id="enterName" aria-describedby="emailHelp" placeholder="Enter name" name="name" required>
+                    <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+                    <small id="name" class="form-text text-muted"class="text-primary">This is required</small>
                   </div>
                   <div class="form-group">
-                        <label for="email"><h4>Email</h4></label>
+                        <label for="email"class="text-primary"><h4>Email</h4></label>
                         <br>
-                        <input type="email" class="form-control" id="enterEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">This is required</small>
+                        <input type="email" class="form-control item text-primary" id="enterEmail" aria-describedby="emailHelp" placeholder="Enter email" name="email"required>
+                        <small id="emailHelp" class="form-text text-muted"class="text-primary">This is required</small>
                       </div>
         </form>
             <hr>
 
              <!-- Question 1 -->
              <form>
-        <label for="ques1">You easily talk to anyone about anything</label>
+        <label for="ques1"class="text-primary">You easily talk to anyone about anything</label>
         <br>
-        <div class="radio">
+        <div class="radio text-primary">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="1">
-                  1 <small>Strongly Disagree</small>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="1"class="text-primary">
+                <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios3" value="3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios4" value="3">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios5" value="3">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -99,36 +130,36 @@
 
                             <!-- Question 2 -->
                             <form>
-        <label for="ques2   ">You care more about trends and fashion</label>
+        <label for="ques2"class="text-primary">You care more about trends and fashion</label>
         <br>
         <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios6" value="1">
-                  1 <small>Strongly Disagree</small>
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios7" value="2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios8" value="3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios9" value="4">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios10" value="5">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -136,36 +167,36 @@
 
                             <!-- Question 3 -->
         <form>
-        <label for="ques3">You are easily distracted and tends to leave things around or forget things</label>
+        <label for="ques3"class="text-primary">You are easily distracted and tends to leave things around or forget things</label>
         <br>
         <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios11" value="1">
-                  1 <small>Strongly Disagree</small>
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios12" value="2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios13" value="3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios14" value="4">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios15" value="5">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -173,36 +204,36 @@
 
                             <!-- Question 4 -->
         <form>
-        <label for="ques4">You have a constant desire to control and manage your friends’ actions</label>
+        <label for="ques4"class="text-primary">You have a constant desire to control and manage your friends’ actions</label>
         <br>
         <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios16" value="1">
-                  1 <small>Strongly Disagree</small>
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios17" value="2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios18" value="3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios19" value="4">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios20" value="5">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -210,36 +241,36 @@
 
                             <!-- Question 5 -->
         <form>
-        <label for="ques5">You thrive for order and schedules</label>
+        <label for="ques5"class="text-primary">You thrive for order and schedules</label>
         <br>
         <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios21" value="1">
-                  1 <small>Strongly Disagree</small>
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios22" value="2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios23" value="3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios24" value="4">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios25" value="5">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -247,36 +278,36 @@
 
                             <!-- Question 6 -->
         <form>
-        <label for="ques6">One can always count on you to get the job done as you are incredibly organized</label>
+        <label for="ques6"class="text-primary">One can always count on you to get the job done as you are incredibly organized</label>
         <br>
         <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios26" value="1">
-                  1 <small>Strongly Disagree</small>
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios27" value="2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios28" value="3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios29" value="4">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios30" value="5">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -284,36 +315,36 @@
 
                             <!-- Question 7 -->
         <form>
-        <label for="ques7">You are interested in adventure and trying new things even if they may be unusual</label>
+        <label for="ques7"class="text-primary">You are interested in adventure and trying new things even if they may be unusual</label>
         <br>
         <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios31" value="1">
-                  1 <small>Strongly Disagree</small>
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios32" value="2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios33" value="3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios34" value="4">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios35" value="5">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -321,36 +352,36 @@
 
                             <!-- Question 8 -->
         <form>
-        <label for="ques8">You are so smart that you tend to make your decisions based on logic or reason</label>
+        <label for="ques8"class="text-primary">You are so smart that you tend to make your decisions based on logic or reason</label>
         <br>
         <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios36" value="1">
-                  1 <small>Strongly Disagree</small>
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios37" value="2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios38" value="3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios39" value="4">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios40" value="5">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -358,36 +389,36 @@
 
                             <!-- Question 9 -->
         <form>
-        <label for="ques9">You don't really move out on Sundays</label>
+        <label for="ques9"class="text-primary">You don't really move out on Sundays</label>
         <br>
         <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios41" value="1">
-                  1 <small>Strongly Disagree</small>
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios42" value="2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios43" value="3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios44" value="4">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios45" value="5">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -395,36 +426,36 @@
 
                             <!-- Question 10 -->
         <form>
-        <label for="ques10">Remembers specifics about certain individuals because you value loyalty</label>
+        <label for="ques10"class="text-primary">Remembers specifics about certain individuals because you value loyalty</label>
         <br>
         <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios46" value="1" data-value-1 = "1">
-                  1 <small>Strongly Disagree</small>
+                  <p class="text-primary">  1 <small class="text-primary">Strongly Disagree</small></p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios47" value="2" data-value-2 = "2">
-                  2
+                  <p class="text-primary"> 2 </p>
                 </label>
               </div>
               <div class="radio">
                 <label>
                   <input type="radio" name="optionsRadios" id="optionsRadios48" value="3"data-value-3 = "3">
-                  3
+                  <p class="text-primary">3</p>
                 </label>
               </div>
               <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios49" value="4"data-value-4 = "4">
-                      4
+                      <p class="text-primary">4</p>
                     </label>
                   </div>
                   <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios50" value="5"data-value-5 = "5">
-                          5 <small>Strongly Agree</small>
+                          <p class="text-primary">  5 <small class="text-primary">Strongly Agree</small></p>
                         </label>
                       </div>
                             <hr>
@@ -433,77 +464,36 @@
             
         </form>
         <button type="submit" class="btn btn-primary"id="submit-btn">Submit</button>
+        <a class="btn btn-primary"href="/"><i class="fas fa-home"></i>&nbsp Home</a>
         </div>
         <div class="col-md-2"></div>
         </div>
 
         <!-- Modals -->
-        <!-- <div class="modal" tabindex="-1" role="dialog"id="modal">
+        <div class="modal" tabindex="-1" role="dialog"id="modal">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title">Modal title</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+                      <!-- <h5 class="modal-title">Modal title</h5> -->
+                      <div id="photo">
+                      <!-- <img src="../images/ross.jpg"alt="mahi"id="profile"> -->
                     </div>
-                    <div class="modal-body">
-                      <p>Modal body text goes here.</p>
+                      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button> -->
+                    </div>
+                    <div class="modal-body text-primary">
+                        <i class="fas fa-theater-masks"></i>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <!-- <button type="button" class="btn btn-primary"href="/">Home</button> -->
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
 
-
-  <!-- Modal Structure -->
-  <div id="modal" class="modal bottom-sheet">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-      <p id="result"></p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    </div>
-  </div>
-
-
-    </div>
-
-   <!-- <script src="/../routing/htmlRoutes.js"></script>  -->
    <script type="text/javascript">
-  //  var friends = require("./server.js");
-  var friends = [
-    {
-        name: "Joey",
-        photo: "",
-        scores: [5, 1, 4, 1, 1, 1, 4, 1, 5, 1]
-    },
-    {
-        name: "Phoebe",
-        photo: "",
-        scores: [5, 3, 4, 1, 1, 4, 5, 2, 1, 4]
-    },
-    {
-        name: "Monica",
-        photo: "",
-        scores: [3, 4, 1, 5, 5, 5, 1, 3, 1, 3]
-    },
-    {
-        name: "Rachel",
-        photo: "",
-        scores: [3, 5, 5, 3, 3, 1, 2, 1, 1, 2]
-    },
-    {
-        name: "Ross",
-        photo: "",
-        scores: [1, 2, 2, 3, 1, 1, 3, 3, 1, 5]
-    }
-]
    var answerArr = [];
    var difference1 = 0;
    var difference2 = 0;
@@ -535,19 +525,45 @@ var newFriend = {
         score: answerArr
       };
 
-      // $.post("/api/friends", newFriend)
-      //   .then(function(data) {
-      //     console.log(data);
-      //     // alert("Finding your match..");
-      //   });
-        calculateResult();
-    
+      // Get value from the api friends
+      $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friends) {
+
+        console.log(friends[0].name);
+        // friends.push(newFriend);
+      });
+
+
+      $.post("/api/friends", newFriend,
+      function(data) {
+          console.log(data);
+          var x = document.forms["myForm"]["name"].value;
+          var y = document.forms["myForm"]["email"].value;
+
+          if ((x == "") && (y == "")) {
+            alert("Please enter details to proceed further");
+            return false;
+          }
+          else{
+            calculateResult();
+          }
+          
+        });
 
 })
+
 
 // Calculate difference between user scores and available scores
 function calculateResult(){
   console.log(answerArr);
+
+  // Get value from the api friends
+  $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friends) {
+
+        console.log(friends[0].name);
+      });
+
   for(var i=0; i<answerArr.length; i++){
     if(answerArr[i] > friends[0].scores[i])
     {
@@ -601,24 +617,24 @@ function calculateResult(){
 
   if(difference1 <= difference2 && difference1 <= difference3 && difference1 <= difference4 && difference1 <= difference5 ){
     console.log(difference1 + "is the smallest");
-    projectResult(difference1,1);
+    projectResult(difference1,0);
   }
   else if(difference2 <= difference1 && difference2 <= difference3 && difference2 <= difference4 && difference2 <= difference5){
     console.log(difference2 + " is the smallest");
-    projectResult(difference2,2);
+    projectResult(difference2,1);
   }
   else if(difference3 <= difference1 && difference3 <= difference2 && difference3 <= difference4 && difference3 <= difference5){
     console.log(difference3 + " is the smallest");
-    projectResult(difference3,3);
+    projectResult(difference3,2);
   }
   
   else if(difference4 <= difference1 && difference4 <= difference2 && difference4 <= difference3 && difference4 <= difference5){
     console.log(difference4 + " is the smallest");
-    projectResult(difference4,4);
+    projectResult(difference4,3);
   }
   else{
     console.log(difference5 + " is the smallest");
-    projectResult(difference5,5);
+    projectResult(difference5,4);
   }
   
 }
@@ -626,10 +642,23 @@ function calculateResult(){
 // Function that projects results of similarity
 function projectResult(difference, flag){
     // friends(flag)
+    // Get value from the api friends
+  $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friends) {
+
+        console.log(friends[0].name);
     console.log("flag " + flag);
     $("#result").text(friends[flag].name);
-
+    $("#photo").empty();
+    $(".modal-body").empty();
+    var imgTag = $("<img>");
+    imgTag.attr("src", friends[flag].photo);
+    imgTag.attr("id", "profile");
+    imgTag.attr("alt", flag);
+    $("#photo").append(imgTag);
     $("#modal").modal("toggle");
+    $(".modal-body").append("<h4>" + "Ahh! Here you Go! Your Twin is " + friends[flag].name + " <i class='fas fa-theater-masks'></i>"+ "</h4>");
+  });
 }
    </script>
 
