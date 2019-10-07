@@ -21,7 +21,7 @@ Type `node server.js` from command line. Funtioning of the application is shown 
 
 ![Site](gifs/FriendFinder.gif)
 
-Application asks about 10 questions to the user, so that application has some knowledge on the user. Having learnt that, user is prompted with an closely associated character from Friends series. This application is quite enjoyable as it points out your twin from friends series.
+Application asks about 10 questions to the user, so that application has some knowledge on the user. Having learnt that, user is provided with an closely associated character from Friends series. This application is quite enjoyable as it points out your twin from friends series.
 
 ## Code Snippet
 *Server side javascript*
