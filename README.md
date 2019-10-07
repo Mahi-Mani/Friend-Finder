@@ -1,5 +1,5 @@
 # Friends' Twin Finder
-console log line number 515 from survey.html
+
 ## Summary
 This application's functionality is quite entertaining as it finds your closely associated friends' character by asking few questions from user.
 
@@ -27,6 +27,7 @@ Application asks about 10 questions to the user, so that application has some kn
 *Server side javascript*
 
 ```Javascript
+// This is basically a simple code on server side to render web pages
 app.get("/survey", function(req, res){
   res.sendFile(path.join(__dirname, "../public/survey.html"));
 })
@@ -40,6 +41,7 @@ app.get("/", function(req, res){
 *Client side javascript*
 
 ```Javascript
+// The below code helps with user input validations
 $.post("/api/friends", newFriend,
       function(data) {
           console.log(data);
@@ -55,6 +57,16 @@ $.post("/api/friends", newFriend,
           }
           
         });
+```
+
+```Javascript
+// The below code basically clears input when close button is clicked
+$("#modalClose").on("click", function(){
+  
+  $("#enterName").val("");
+  $("#enterEmail").val("");
+  $("input:radio").attr("checked", false);
+})
 ```
 >Client side javascript that validates user input. Application functionality proceeds further only if form is filled by the user
 
