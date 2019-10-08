@@ -2,15 +2,13 @@ var friends = require("../data/friends");
 var path = require("path");
 
 module.exports = function(app) {
-app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "/app/public/home.html"));
-})
 
+// Friends objects are sent as response
 app.get("/api/friends", function(req, res){
     return res.json(friends);
 })
 
-
+// Whenever new user is looked upon, values are posted to the below route
 app.post("/api/friends", function(req, res) {
     var newFriend = req.body;
 

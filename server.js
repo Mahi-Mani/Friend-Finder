@@ -38,9 +38,11 @@ var friends = [
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Routing
 require("./app/routing/htmlRoutes")(app);
 require("./app/routing/apiRoutes")(app);
 
+// Listening to port
 app.listen(PORT, function(){
     console.log("App listening to PORT " + PORT);
 })

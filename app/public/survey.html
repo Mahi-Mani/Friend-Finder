@@ -474,19 +474,13 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <!-- <h5 class="modal-title">Modal title</h5> -->
                       <div id="photo">
-                      <!-- <img src="../images/ross.jpg"alt="mahi"id="profile"> -->
                     </div>
-                      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button> -->
                     </div>
                     <div class="modal-body text-primary">
                         <i class="fas fa-theater-masks"></i>
                     </div>
                     <div class="modal-footer">
-                      <!-- <button type="button" class="btn btn-primary"href="/">Home</button> -->
                       <button type="button" class="btn btn-secondary" data-dismiss="modal"id="modalClose">Close</button>
                     </div>
                   </div>
@@ -509,7 +503,6 @@ $("#submit-btn").on("click", function(event){
 
     var name = $("#enterName").val().trim();
     var email = $("#enterEmail").val().trim();
-    // var answerArr = [];
 
     for(var i=1; i<=50; i++){
     if($("input[id=optionsRadios"+i+"]:checked").val()){
@@ -535,7 +528,7 @@ var newFriend = {
         // friends.push(newFriend);
       });
 
-
+      // Posting new value to api route
       $.post("/api/friends", newFriend,
       function(data) {
           console.log(data);
@@ -543,15 +536,18 @@ var newFriend = {
           var x = document.forms["myForm"]["name"].value;
           var y = document.forms["myForm"]["email"].value;
           
+          // Input validation
           if ((x == "") && (y == "")){
             alert("Please enter details to proceed further");
             return false;
           }
+          // Radio button validation
           else if((newFriend.score.length < 10)){
             alert("Please check radio buttons to view result");
             answerArr = [];
           }
 
+          // When all validations are done then proceeds to next functionality
           else{
             calculateResult();
           }
@@ -568,8 +564,6 @@ function calculateResult(){
   // Get value from the api friends
   $.ajax({ url: "/api/friends", method: "GET" })
       .then(function(friends) {
-
-        console.log(friends[0].name);
 
   for(var i=0; i<answerArr.length; i++){
     if(answerArr[i] > friends[0].scores[i])
@@ -624,23 +618,28 @@ function calculateResult(){
 
   if(difference1 <= difference2 && difference1 <= difference3 && difference1 <= difference4 && difference1 <= difference5 ){
     console.log(difference1 + "is the smallest");
+    // Calling project result along with the value of the index number to keep track of
     projectResult(difference1,0);
   }
   else if(difference2 <= difference1 && difference2 <= difference3 && difference2 <= difference4 && difference2 <= difference5){
     console.log(difference2 + " is the smallest");
+    // Calling project result along with the value of the index number to keep track of
     projectResult(difference2,1);
   }
   else if(difference3 <= difference1 && difference3 <= difference2 && difference3 <= difference4 && difference3 <= difference5){
     console.log(difference3 + " is the smallest");
+    // Calling project result along with the value of the index number to keep track of
     projectResult(difference3,2);
   }
   
   else if(difference4 <= difference1 && difference4 <= difference2 && difference4 <= difference3 && difference4 <= difference5){
     console.log(difference4 + " is the smallest");
+    // Calling project result along with the value of the index number to keep track of
     projectResult(difference4,3);
   }
   else{
     console.log(difference5 + " is the smallest");
+    // Calling project result along with the value of the index number to keep track of
     projectResult(difference5,4);
   }
 }); 
@@ -648,11 +647,12 @@ function calculateResult(){
 
 // Function that projects results of similarity
 function projectResult(difference, flag){
-    // friends(flag)
+  
     // Get value from the api friends
   $.ajax({ url: "/api/friends", method: "GET" })
       .then(function(friends) {
 
+        var name =  $("#enterName").val().trim();
         console.log(friends[0].name);
     console.log("flag " + flag);
     $("#result").text(friends[flag].name);
@@ -664,24 +664,17 @@ function projectResult(difference, flag){
     imgTag.attr("alt", flag);
     $("#photo").append(imgTag);
     $("#modal").modal("toggle");
-    $(".modal-body").append("<h4>" + "Ahh! Here you Go! Your Twin is " + friends[flag].name + " <i class='fas fa-theater-masks'></i>"+ "</h4>");
+    $(".modal-body").append("<h4>" + "Here you Go " + name + "! Your Twin is " + friends[flag].name + " <i class='fas fa-theater-masks'></i>"+ "</h4>");
   });
 
 }
 
+// On click of close button on modal clears values entered/checked by user
 $("#modalClose").on("click", function(){
   
   $("#enterName").val("");
   $("#enterEmail").val("");
   $("input:radio").attr("checked", false);
-//   for(var i=1; i<=50; i++){
-//       var number = ($("input[id=optionsRadios"+i+"]:checked").val(""));
-//       number = false;
-    
-    
-// }
-
-
 })
 
    </script>
