@@ -1,4 +1,4 @@
-# Friends' Twin Finder
+# Friend Finder
 
 ## Summary
 This application's functionality is quite entertaining as it finds a closely associated friend.
